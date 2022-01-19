@@ -1,0 +1,152 @@
+ git init
+Initialized empty Git repository in D:/vcs/task8/.git/
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git add .
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git commit -m "added all the files"
+[master (root-commit) 270bb09] added all the files
+ 2 files changed, 5 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 index.html
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ ls
+README.md  index.html
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git branch
+* master
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git branch my-feature
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git branch
+* master
+  my-feature
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git status
+On branch my-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git add .
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git commit -m "adding about.html"
+[my-feature f950996] adding about.html
+ 1 file changed, 3 insertions(+)
+ create mode 100644 about.html
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git status
+On branch my-feature
+nothing to commit, working tree clean
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git checkout master
+Switched to branch 'master'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git branch
+* master
+  my-feature
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git checkout master
+Switched to branch 'master'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git checkout master
+Already on 'master'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git checkout master
+Switched to branch 'master'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git merge my-feature
+Updating 270bb09..f950996
+Fast-forward
+ about.html | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 about.html
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git branch
+* master
+  my-feature
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git branch
+  master
+* my-feature
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (my-feature)
+$ git checkout master
+Switched to branch 'master'
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git remote add origin https://github.com/Dee-2021/task8.git
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 800 bytes | 400.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Dee-2021/task8.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+253604@Varun-PC MINGW64 /D/vcs/task8 (master)
+$
